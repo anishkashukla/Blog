@@ -130,5 +130,5 @@ app.delete("/blogs/:id", function(req, res)
 let PORT = 3000;
 app.listen(PORT,function()
 {
-  console.log("Server started at localhost" +    PORT);
+  console.log("Server started at localhost :  " +    PORT);
 });
