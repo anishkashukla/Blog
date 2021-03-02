@@ -3,7 +3,11 @@ methodOverride      = require("method-override"),
 expressSanitizer    = require("express-sanitizer"),
 mongoose            = require("mongoose"),
 express             = require("express"),
+passport            = require("passport"),
+LocalStrategy       = require("passport-local"),
+User                = require("./models/user"), 
 app                 = express();
+
 mongoose.connect("mongodb://localhost/blog_app",{ useNewUrlParser: true });
 app.set("view engine","ejs");
 app.use(express.static("public"));
@@ -123,7 +127,7 @@ app.delete("/blogs/:id", function(req, res)
 });
 
 
-let PORT = 8080;
+let PORT = 3000;
 app.listen(PORT,function()
 {
   console.log("Server started at localhost" +    PORT);
