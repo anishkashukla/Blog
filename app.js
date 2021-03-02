@@ -8,7 +8,7 @@ LocalStrategy       = require("passport-local"),
 User                = require("./models/user"), 
 app                 = express();
 
-mongoose.connect("mongodb://localhost/blog_app",{ useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/blog_app",{ useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
