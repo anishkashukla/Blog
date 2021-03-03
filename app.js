@@ -21,7 +21,7 @@ app.use(methodOverride("_method"));
 
 app.use(require("express-session")
 ({
-  secret : "Anishka",
+  secret : "Notes",
   resave : false,
   saveUnitialized : false
 }));
