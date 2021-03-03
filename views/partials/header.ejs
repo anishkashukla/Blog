@@ -11,6 +11,18 @@
       <div class="ui container">
         <div class="header item"><i class="code icon"></i>  Blog Site </div>
         <a href="/" class="item"> Home </a>
-        <a href="/blogs/new" class="item"> New Post </a>
+        
+        <% if(!currentUser)
+        { %>
+          <a href="/login" class="item"> Login </a>
+          <a href="/register" class="item"> SignUp </a>
+    <%  }
+         else 
+        { %>
+          <a href="#" class="item"> Signed in as <%= currentUser.username %> </a>
+          <a href="/blogs/new" class="item"> New Post </a>
+          <a href="/logout" class="item"> Logout </a>
+       <% } %>
+        
       </div>
     </div>
